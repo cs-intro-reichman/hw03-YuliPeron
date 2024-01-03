@@ -12,6 +12,24 @@ public class UniqueChars {
      */
     public static String uniqueChars(String s) {
         // Replace the following statement with your code
-        return null;
+        String newString = "";
+        boolean isExist; // check if the character was appered id the string
+        for (int i =0; i<s.length(); i++) {
+            isExist = false;
+            if(s.charAt(i) != ' ') {
+                for(int j = 0; j<newString.length(); j++)
+                {
+                    if((s.charAt(i) == newString.charAt(j)) ) {
+                        isExist = true;
+                        break;
+                    }
+                }
+            }
+            if (isExist == false) {
+                newString += s.charAt(i);
+            }
+
+        }
+        return newString;
     }
 }
