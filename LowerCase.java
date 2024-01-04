@@ -17,7 +17,7 @@ public class LowerCase {
         {
             if (s.charAt(i) >= 'A' && s.charAt(i)<= 'Z')
             {
-                newString+=(char)(s.charAt(i)+32);java
+                newString+=(char)(s.charAt(i)+32);
             }
             else{
                 newString += s.charAt(i);
