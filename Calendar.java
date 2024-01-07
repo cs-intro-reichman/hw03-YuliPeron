@@ -15,11 +15,14 @@ public class Calendar {
         // Advances the date and the day-of-the-week from 1/1/1900 till 31/12/1999, inclusive.
         // Prints each date dd/mm/yyyy in a separate line. If the day is a Sunday, prints "Sunday".
         // The following variable, used for debugging purposes, counts how many days were advanced so far.
-        year = Integer.parseInt(args[0]);
+        int givenyear = Integer.parseInt(args[0]);
         int debugDaysCounter = 0;
         //// Write the necessary initialization code, and replace the condition
         //// of the while loop with the necessary condition
-        while (year != year +1) {
+        while (year != givenyear){
+            advance();
+        }
+        while (year != givenyear+1) {
             //// Write the body of the while
             System.out.print(dayOfMonth + "/" + month + "/" + year);
             if(dayOfWeek == 1) {
@@ -92,3 +95,4 @@ public class Calendar {
         return daysInMonth;
     }
 }
+
